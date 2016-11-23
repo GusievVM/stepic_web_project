@@ -25,4 +25,6 @@ urlpatterns = patterns (
     url(r'^ask/', views.someview, name='someview'),
     url(r'^popular/', views.someview, name='someview'),
     url(r'^new/', views.someview, name='someview'),
+    url(r'^templatetesturlbase/', views.templatetestbase, name='templatetestbase'),
+    url(r'^templatetesturlindex/', views.templatetestindex, name='templatetestindex'),
 )
