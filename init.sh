@@ -22,6 +22,6 @@ sudo gunicorn -b 0.0.0.0:8080 hello:application &
 cd ~/web/ask/
 sudo gunicorn -b 0.0.0.0:8000 ask.wsgi:application &
 
+sudo /etc/init.d/mysql restart﻿
 
 #sudo /etc/init.d/gunicorn restart
-#﻿sudo /etc/init.d/mysql start﻿
