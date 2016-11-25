@@ -1,0 +1,111 @@
+git status
+
+git add --all
+
+git status
+
+git commit -m "Add all files to Git - 3"
+
+git remote add MyGit git@github.com:GusievVM/stepic_web_project.git
+
+git push MyGit master 
+
+
+#################
+git status
+
+git add --all
+
+git status
+
+git commit -m "Add all files to Git - 3"
+
+git remote add MyGit https://github.com/GusievVM/stepic_web_project.git
+
+git push MyGit master
+
+
+######################################################################
+mysql --version
+
+service mysql status
+
+# sudo service mysql start
+
+sudo /etc/init.d/mysql restart
+
+mysqladmin -p -u root version
+
+---
+
+sudo mysql_install_db
+
+-------------------------
+
+mysql -u root
+
+CREATE DATABASE ask_db CHARACTER SET UTF8;
+
+CREATE USER ask_db_usr@localhost IDENTIFIED BY 'admindbpass';
+
+GRANT ALL PRIVILEGES ON ask_db.* TO ask_db_usr@localhost;
+
+FLUSH PRIVILEGES;
+
+exit
+quit
+
+--------------------------
+
+cd ~/web/ask
+
+python manage.py makemigrations qa
+
+python manage.py sqlmigrate qa 0001
+
+python manage.py check
+
+python manage.py migrate
+
+
+
+
+
+
+#######################################################################
+
+#https
+git clone https://github.com/GusievVM/stepic_web_project.git /home/box/web
+bash /home/box/web/init.sh
+
+
+#ssh
+git clone git@github.com:GusievVM/stepic_web_project.git /home/box/web
+bash /home/box/web/init.sh
+
+
+#original_stepic
+git clone https://github.com/your_account/stepic_web_project.git /home/box/web
+bash /home/box/web/init.sh
+
+
+
+
+ssh_link:	git@github.com:GusievVM/stepic_web_project.git
+https_link:	https://github.com/GusievVM/stepic_web_project.git
+
+
+
+
+
+
+
+
+
+
+################################## init.sh
+sudo ﻿ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
+sudo /etc/init.d/nginx restart
+sudo ln -s /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
+sudo /etc/init.d/gunicorn restart
+﻿sudo /etc/init.d/mysql start﻿
